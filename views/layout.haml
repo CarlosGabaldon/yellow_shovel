@@ -1,0 +1,18 @@
+!!! Strict
+%html
+  %head
+    %title Yellow Shovel
+    %link{:rel => "stylesheet", :href => "/css/style.css", :type => "text/css", :media => "all"}
+  %body
+    %div{:id => "header"}
+      %h1
+        %span
+          yellow
+          %font{:style => "color: #90b500;"}
+            shovel
+    %div{:id => "container"}
+      %div{:id => "content"}
+        = yield
+      %div{:id => "footer"}
+        %p &copy;2010 Yellow Shovel, LLC
+

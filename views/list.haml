@@ -1,0 +1,33 @@
+%div{:id => "intro"}
+    %div{:class => "wide"}
+        %p{:class => "left"}
+            At Yellow Shovel we specialize in custom application development
+            utilizing open source software. We pride ourselves in being able to help our
+            clients realize their vision at a very early stage.
+        %p{:class => "left"}
+            We help our clients visualize the big picture while we keep our eyes on the
+            details to deliver projects with the highest quality in the quickest time possible.
+    %div{:class => "narrow"}
+        %p{:class => "left"}
+            Contact us
+            %a{:href => "mailto:info@yellowshovel.com" } via email
+            to see how we can help you reach success on your current or next project.
+        %p{:class => "left"}
+            You can also follow us on
+            %a{:href => "http://twitter.com/yellowshovel"} twitter.
+
+
+%ul{:id => "project_list"}
+    -@projects.each do |project|
+        %li
+            %h2
+                %a{:href => "/portfolio/projects/#{project.permalink}"}
+            %a{:href => "#{project.url}"}
+                %img{:src => "#{project.thumbnail_path}", :height => '220', :width => '240'}
+            %p
+                %a{:href => "#{project.url}"}
+                    =project.name
+                %small
+                    =project.short_desc
+                %a{:href => "#{project.repository_path}"} Open source code
+

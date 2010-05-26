@@ -1,0 +1,174 @@
+body, p, input, textarea {
+  font-family: "Lucida Grande", Verdana, sans-serif;
+}
+
+body {
+  background: #e5f1f4;
+  color: #3f4648;
+  margin: 0;
+}
+
+input {
+  color: black;
+}
+
+/******************************
+*  Layout
+******************************/
+
+#container {
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+  width: 800px;
+}
+
+#header {
+  background: #434c2a /*url(../images/logo/logo.png) no-repeat*/ bottom;
+  color: white;
+  height: 90px;
+  text-align: center;
+  font-size: 200%;
+  padding-top: 50px;
+  margin-bottom: 0.1em;
+}
+
+#content {
+
+}
+
+
+#footer {
+  font-size: 0.8em;
+  text-align: center;
+  padding-top: 4em;
+  clear: both;
+}
+
+
+/******************************
+*  HTML Elements
+******************************/
+
+h1 {
+  margin: 0 0 10px 0;
+  padding-bottom: 8px;
+  font-weight: normal;
+}
+
+#content p {
+    text-align: left;
+
+}
+
+}
+/*
+h1 span {
+  display: none;
+}
+*/
+p {
+}
+
+a, a:visited {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  color: black;
+  background-color: #cccccc;
+}
+
+form {
+  display: block;
+  clear: both;
+  text-align: center;
+  padding: 1em;
+}
+
+input {
+  font-size: 1.2em;
+  padding: 0.2em;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+small, p.left {
+  color: #333333;
+  font-size: 0.7em;
+}
+
+p.left a, p.left a:visited {
+  border-bottom: 1px solid black;
+}
+
+p.left {
+  text-align: left;
+}
+
+div.description {
+  text-align: left;
+}
+
+.wide {
+  float: left;
+  font-size: 1.3em;
+  height: 150px;
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-bottom: 20px;
+  voice-family: "\"}\"";
+  voice-family:inherit;
+  width: 450px;
+}
+
+.narrow {
+  float: left;
+  font-size: 1.3em;
+  height: 150px;
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-bottom: 20px;
+  voice-family: "\"}\"";
+  voice-family:inherit;
+  width: 200px;
+}
+
+/******************************
+*  Project thumbnails
+******************************/
+
+#project_list, #intro {
+  list-style-type: none;
+  margin: 0; padding: 0;
+}
+
+
+#project_list li {
+  float: left;
+  height: 300px;
+  padding: 28px;
+  voice-family: "\"}\"";
+  voice-family:inherit;
+  width: 200px;
+}
+
+#project_list li a img,
+#project_list li a:visited img{
+  display: block;
+  margin-bottom: 5px;
+  border: 0px solid black;
+}
+
+#project_list li a:hover img {
+  border: 0px solid #fb54b2;
+}
+
+#project_list li small{
+  display: block;
+}
+
+li.clear-left {
+  clear: left;
+}
+
