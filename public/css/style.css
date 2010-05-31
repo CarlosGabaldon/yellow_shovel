@@ -24,7 +24,7 @@ input {
 }
 
 #header {
-  background: #434c2a /*url(../images/logo/logo.png) no-repeat*/ bottom;
+  background: #434c2a url(/images/yellow_shovel_logo.png) no-repeat bottom;
   color: white;
   height: 90px;
   text-align: center;
@@ -61,12 +61,11 @@ h1 {
 
 }
 
-}
-/*
+
 h1 span {
   display: none;
 }
-*/
+
 p {
 }
 
