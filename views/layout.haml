@@ -13,6 +13,15 @@
     %div{:id => "container"}
       %div{:id => "content"}
         = yield
+        
+        %div{:id => "disqus_thread"}          
+        :javascript 
+          (function() {
+           var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+           dsq.src = 'http://yellowshovel.disqus.com/embed.js';
+           (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+          
       %div{:id => "footer"}
         %h2 &copy;2010 Yellow Shovel, LLC
         %div{:id => "dev_info"}
@@ -28,13 +37,7 @@
               %a{:href => "http://www.ruby-lang.org"} Ruby
             %li
               %a{:href => "http://git.or.cz/"} Git
-      %div{:id => "disqus_thread"}          
-      :javascript 
-        (function() {
-         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-         dsq.src = 'http://yellowshovel.disqus.com/embed.js';
-         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
+      
            
   
         
