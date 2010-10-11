@@ -12,7 +12,7 @@
 
 
 
-= SET THE STAGE
+= SET THE LOCAL STAGE
 
 == RUBY
   $ curl -O ftp://ftp.ruby-lang.org/pub/ruby/1.8/ruby-1.8.6.tar.gz
@@ -52,4 +52,33 @@
   $ cd ./yellow_shovel
   $ ruby main.rb
   $ rake sinatra:seed_db
+
+
+= ON THE ROAD
+
+
+ $ sudo gem install passenger
+ $ sudo passenger-install-nginx-module 
+
+ $ # select option 1
+ $ # prefix directory: enter
+ $ # copy server config snippet provided in terminal
+ $ sudo mate /etc/hosts 
+ $ # add local host name for 127.0.0.1; such as fossa.local
+ $ sudo mate /opt/nginx/conf/nginx.conf
+ $ #copy server snippet to nginx conf
+    server {
+    listen 80;
+    server_name fossa.local;
+    root /Users/carlos/Projects/fossa2/public/;   # <--- be sure to point to 'public'!
+    passenger_enabled on;
+     rails_env devlopment;
+   }
+
+ $ # save nginx.conf
+ $ sudo /opt/nginx/sbin/nginx # start nigix
+ $ open browser http://fossa.local/
+ $ # reference http://www.modrails.com/videos/passenger_nginx.mov
+ $ sudo /opt/nginx/sbin/nginx -s stop # stop nigix
+ $ restart apache: /etc/init.d/apache2 restart
 
