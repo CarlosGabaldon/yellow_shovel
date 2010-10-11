@@ -70,7 +70,7 @@
           passenger_enabled on;
        }
 
-=== Save nginx.conf --> ctrl-x then return
+=== Save nginx.conf --> ctrl-x then enter
  $ sudo /opt/nginx/sbin/nginx # <-- start nigix; stop nigix --> sudo /opt/nginx/sbin/nginx -s stop
  $ # open browser http://yellowshovel.com
  $ # reference http://www.modrails.com/videos/passenger_nginx.mov
