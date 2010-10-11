@@ -59,8 +59,8 @@
  $ ssh root@173.230.151.162
  $ sudo gem install passenger
  $ sudo passenger-install-nginx-module 
-=== Select Option 1
-=== Prefix directory: enter
+ $ Select Option 1
+ $ Prefix directory: enter
  $ sudo nano /opt/nginx/conf/nginx.conf
 === Add the following to nginx.conf 
     server {
