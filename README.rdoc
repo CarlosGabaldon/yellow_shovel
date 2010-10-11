@@ -56,28 +56,23 @@
 
 = ON THE ROAD
 
-
+ $ ssh root@173.230.151.162
  $ sudo gem install passenger
  $ sudo passenger-install-nginx-module 
-
  $ # select option 1
  $ # prefix directory: enter
- $ # copy server config snippet provided in terminal
- $ sudo mate /etc/hosts 
- $ # add local host name for 127.0.0.1; such as fossa.local
- $ sudo mate /opt/nginx/conf/nginx.conf
- $ #copy server snippet to nginx conf
+ $ sudo nano /opt/nginx/conf/nginx.conf
+  # add to nginx.conf 
     server {
-    listen 80;
-    server_name yellow_shovel.local;
-    root /Users/carlos/Projects/yellow_shovel/public/;   # <--- be sure to point to 'public'!
-    passenger_enabled on;
-     rails_env devlopment;
-   }
+          listen 80;
+          server_name www.yellowshovel.com;
+          root /var/www/yellow_shovel/public;   # <--- be sure to point to 'public'!
+          passenger_enabled on;
+       }
 
- $ # save nginx.conf
+  # save nginx.conf --> ctrl-x then return
  $ sudo /opt/nginx/sbin/nginx # <-- start nigix; stop nigix --> sudo /opt/nginx/sbin/nginx -s stop
- $ open browser http://fossa.local/
+ $ # open browser http://yellowshovel.com
  $ # reference http://www.modrails.com/videos/passenger_nginx.mov
 
 
