@@ -69,16 +69,16 @@
  $ #copy server snippet to nginx conf
     server {
     listen 80;
-    server_name fossa.local;
-    root /Users/carlos/Projects/fossa2/public/;   # <--- be sure to point to 'public'!
+    server_name yellow_shovel.local;
+    root /Users/carlos/Projects/yellow_shovel/public/;   # <--- be sure to point to 'public'!
     passenger_enabled on;
      rails_env devlopment;
    }
 
  $ # save nginx.conf
- $ sudo /opt/nginx/sbin/nginx # start nigix
+ $ sudo /opt/nginx/sbin/nginx # <-- start nigix; stop nigix --> sudo /opt/nginx/sbin/nginx -s stop
  $ open browser http://fossa.local/
  $ # reference http://www.modrails.com/videos/passenger_nginx.mov
- $ sudo /opt/nginx/sbin/nginx -s stop # stop nigix
- $ restart apache: /etc/init.d/apache2 restart
+
+
 
